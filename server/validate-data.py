@@ -122,7 +122,7 @@ def main() -> int:
 
     def validate_fallback(page_text: str, variable: str, expected, page_name: str) -> None:
         match = re.search(
-            rf"var {variable} = (\\[.*?\\]);\\s*\\n",
+            rf"var {variable} = (\[.*?\]);\s*\n",
             page_text,
             flags=re.S,
         )
