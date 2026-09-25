@@ -6,7 +6,8 @@
     "category": "Email",
     "alternativeTo": [
       "gmail-free",
-      "microsoft-365"
+      "microsoft-365",
+      "microsoft-outlook"
     ],
     "provider": "Proton AG",
     "hqCountry": "Switzerland",
@@ -31,7 +32,8 @@
     "category": "Email",
     "alternativeTo": [
       "gmail-free",
-      "microsoft-365"
+      "microsoft-365",
+      "microsoft-outlook"
     ],
     "provider": "Tutao GmbH",
     "hqCountry": "Germany",
@@ -56,7 +58,8 @@
     "category": "Email",
     "alternativeTo": [
       "gmail-free",
-      "microsoft-365"
+      "microsoft-365",
+      "microsoft-outlook"
     ],
     "provider": "Fastmail Pty Ltd",
     "hqCountry": "Australia",
@@ -229,7 +232,9 @@
     "category": "Messaging",
     "alternativeTo": [
       "whatsapp",
-      "slack"
+      "slack",
+      "telegram",
+      "discord"
     ],
     "provider": "Signal Foundation",
     "hqCountry": "US (nonprofit)",
@@ -254,7 +259,9 @@
     "category": "Messaging & Collaboration",
     "alternativeTo": [
       "slack",
-      "microsoft-teams"
+      "microsoft-teams",
+      "telegram",
+      "discord"
     ],
     "provider": "Element (New Vector Ltd)",
     "hqCountry": "United Kingdom",
@@ -280,7 +287,8 @@
     "alternativeTo": [
       "zoom",
       "microsoft-teams",
-      "google-workspace"
+      "google-workspace",
+      "google-meet"
     ],
     "provider": "8x8 / Community",
     "hqCountry": "Open source",
@@ -305,7 +313,8 @@
     "category": "Video Conferencing",
     "alternativeTo": [
       "zoom",
-      "microsoft-teams"
+      "microsoft-teams",
+      "google-meet"
     ],
     "provider": "BigBlueButton Inc",
     "hqCountry": "Canada",
@@ -331,7 +340,9 @@
     "alternativeTo": [
       "asana",
       "monday-com",
-      "trello"
+      "trello",
+      "jira",
+      "smartsheet"
     ],
     "provider": "OpenProject GmbH",
     "hqCountry": "Germany",
@@ -356,7 +367,9 @@
     "category": "Project Management",
     "alternativeTo": [
       "trello",
-      "asana"
+      "asana",
+      "jira",
+      "smartsheet"
     ],
     "provider": "Community",
     "hqCountry": "Open source",
@@ -382,7 +395,8 @@
     "alternativeTo": [
       "wordpress-com",
       "squarespace",
-      "wix"
+      "wix",
+      "medium"
     ],
     "provider": "WordPress Foundation",
     "hqCountry": "Global (open source)",
@@ -406,7 +420,9 @@
     "slug": "ghost",
     "category": "Website / Blog",
     "alternativeTo": [
-      "wordpress-com"
+      "wordpress-com",
+      "substack",
+      "medium"
     ],
     "provider": "Ghost Foundation",
     "hqCountry": "Global (nonprofit)",
@@ -431,7 +447,8 @@
     "category": "Forms / Surveys",
     "alternativeTo": [
       "surveymonkey",
-      "google-forms"
+      "google-forms",
+      "microsoft-forms"
     ],
     "provider": "LimeSurvey GmbH",
     "hqCountry": "Germany",
@@ -456,7 +473,8 @@
     "category": "Forms",
     "alternativeTo": [
       "typeform",
-      "google-forms"
+      "google-forms",
+      "microsoft-forms"
     ],
     "provider": "Tally Inc",
     "hqCountry": "Belgium",
@@ -480,7 +498,9 @@
     "slug": "listmonk",
     "category": "Email Marketing",
     "alternativeTo": [
-      "mailchimp"
+      "mailchimp",
+      "constant-contact",
+      "campaign-monitor"
     ],
     "provider": "Community",
     "hqCountry": "Open source",
@@ -504,7 +524,8 @@
     "slug": "buttondown",
     "category": "Email Newsletter",
     "alternativeTo": [
-      "mailchimp"
+      "mailchimp",
+      "substack"
     ],
     "provider": "Justin Duke",
     "hqCountry": "United States",
@@ -528,7 +549,8 @@
     "slug": "penpot",
     "category": "Design",
     "alternativeTo": [
-      "canva"
+      "canva",
+      "figma"
     ],
     "provider": "Kaleidos Open Source SL",
     "hqCountry": "Spain",
@@ -552,7 +574,8 @@
     "slug": "cal-com",
     "category": "Scheduling",
     "alternativeTo": [
-      "calendly"
+      "calendly",
+      "doodle"
     ],
     "provider": "Cal.com Inc",
     "hqCountry": "United States",
@@ -576,7 +599,9 @@
     "slug": "excalidraw",
     "category": "Whiteboard",
     "alternativeTo": [
-      "trello"
+      "trello",
+      "miro",
+      "mural"
     ],
     "provider": "Community",
     "hqCountry": "Open source",
@@ -600,7 +625,8 @@
     "slug": "mythic-beasts",
     "category": "Web Hosting",
     "alternativeTo": [
-      "amazon-web-services"
+      "amazon-web-services",
+      "godaddy"
     ],
     "provider": "Mythic Beasts Ltd",
     "hqCountry": "United Kingdom",
@@ -624,7 +650,8 @@
     "slug": "krystal",
     "category": "Web Hosting",
     "alternativeTo": [
-      "amazon-web-services"
+      "amazon-web-services",
+      "godaddy"
     ],
     "provider": "Krystal Hosting Ltd",
     "hqCountry": "United Kingdom",
@@ -648,7 +675,10 @@
     "slug": "hetzner",
     "category": "Cloud Infrastructure",
     "alternativeTo": [
-      "amazon-web-services"
+      "amazon-web-services",
+      "google-cloud-platform",
+      "microsoft-azure",
+      "godaddy"
     ],
     "provider": "Hetzner Online GmbH",
     "hqCountry": "Germany",
@@ -673,7 +703,8 @@
     "category": "Email",
     "alternativeTo": [
       "gmail-free",
-      "microsoft-365"
+      "microsoft-365",
+      "microsoft-outlook"
     ],
     "provider": "Heinlein Hosting GmbH",
     "hqCountry": "Germany",
@@ -698,7 +729,8 @@
     "category": "Email",
     "alternativeTo": [
       "gmail-free",
-      "microsoft-365"
+      "microsoft-365",
+      "microsoft-outlook"
     ],
     "provider": "Infomaniak Network SA",
     "hqCountry": "Switzerland",
@@ -724,7 +756,10 @@
     "alternativeTo": [
       "dropbox",
       "google-workspace",
-      "microsoft-365"
+      "microsoft-365",
+      "google-drive",
+      "microsoft-onedrive",
+      "box"
     ],
     "provider": "Nextcloud GmbH / community",
     "hqCountry": "Germany",
@@ -750,7 +785,10 @@
     "alternativeTo": [
       "dropbox",
       "google-workspace",
-      "microsoft-365"
+      "microsoft-365",
+      "google-drive",
+      "microsoft-onedrive",
+      "box"
     ],
     "provider": "Seafile Ltd / community",
     "hqCountry": "China; EU representative in Germany",
@@ -776,7 +814,10 @@
     "alternativeTo": [
       "dropbox",
       "google-workspace",
-      "microsoft-365"
+      "microsoft-365",
+      "google-drive",
+      "microsoft-onedrive",
+      "box"
     ],
     "provider": "ownCloud GmbH (a Kiteworks company)",
     "hqCountry": "Germany / United States parent",
@@ -802,7 +843,10 @@
     "alternativeTo": [
       "dropbox",
       "google-workspace",
-      "microsoft-365"
+      "microsoft-365",
+      "google-drive",
+      "microsoft-onedrive",
+      "box"
     ],
     "provider": "Proton AG",
     "hqCountry": "Switzerland",
@@ -1000,7 +1044,8 @@
     "category": "Messaging & Collaboration",
     "alternativeTo": [
       "slack",
-      "microsoft-teams"
+      "microsoft-teams",
+      "discord"
     ],
     "provider": "Zulip / Kandra Labs, Inc.",
     "hqCountry": "United States",
@@ -1025,7 +1070,8 @@
     "category": "Messaging & Collaboration",
     "alternativeTo": [
       "slack",
-      "microsoft-teams"
+      "microsoft-teams",
+      "discord"
     ],
     "provider": "Mattermost, Inc.",
     "hqCountry": "United States",
@@ -1050,7 +1096,8 @@
     "category": "Messaging & Collaboration",
     "alternativeTo": [
       "slack",
-      "microsoft-teams"
+      "microsoft-teams",
+      "discord"
     ],
     "provider": "Rocket.Chat Technologies Corp.",
     "hqCountry": "United States / Brazil",
@@ -1076,7 +1123,9 @@
     "alternativeTo": [
       "asana",
       "monday-com",
-      "trello"
+      "trello",
+      "jira",
+      "smartsheet"
     ],
     "provider": "Kaleidos Open Source",
     "hqCountry": "Spain",
@@ -1102,7 +1151,9 @@
     "alternativeTo": [
       "asana",
       "monday-com",
-      "trello"
+      "trello",
+      "jira",
+      "smartsheet"
     ],
     "provider": "Plane Software, Inc.",
     "hqCountry": "United States",
@@ -1128,7 +1179,9 @@
     "alternativeTo": [
       "asana",
       "monday-com",
-      "trello"
+      "trello",
+      "jira",
+      "smartsheet"
     ],
     "provider": "Leantime, Inc. / community",
     "hqCountry": "United States",
@@ -1154,7 +1207,9 @@
     "alternativeTo": [
       "trello",
       "asana",
-      "monday-com"
+      "monday-com",
+      "jira",
+      "smartsheet"
     ],
     "provider": "Wekan / community",
     "hqCountry": "Finland / open source",
@@ -1180,7 +1235,8 @@
     "alternativeTo": [
       "wordpress-com",
       "squarespace",
-      "wix"
+      "wix",
+      "medium"
     ],
     "provider": "Drupal Association / community",
     "hqCountry": "Global open-source community",
@@ -1206,7 +1262,8 @@
     "alternativeTo": [
       "wordpress-com",
       "squarespace",
-      "wix"
+      "wix",
+      "medium"
     ],
     "provider": "Grav / OpenCollective community",
     "hqCountry": "Open source",
@@ -1232,7 +1289,8 @@
     "alternativeTo": [
       "wordpress-com",
       "squarespace",
-      "wix"
+      "wix",
+      "medium"
     ],
     "provider": "Publii / community",
     "hqCountry": "Open source",
@@ -1258,7 +1316,8 @@
     "alternativeTo": [
       "surveymonkey",
       "typeform",
-      "google-forms"
+      "google-forms",
+      "microsoft-forms"
     ],
     "provider": "Formbricks GmbH",
     "hqCountry": "Germany",
@@ -1283,7 +1342,8 @@
     "category": "Forms / Data Collection",
     "alternativeTo": [
       "surveymonkey",
-      "google-forms"
+      "google-forms",
+      "microsoft-forms"
     ],
     "provider": "KoboToolbox, Inc.",
     "hqCountry": "United States (nonprofit)",
@@ -1308,7 +1368,8 @@
     "category": "Forms / Surveys",
     "alternativeTo": [
       "google-forms",
-      "surveymonkey"
+      "surveymonkey",
+      "microsoft-forms"
     ],
     "provider": "Nextcloud community",
     "hqCountry": "Germany / open source",
@@ -1332,7 +1393,9 @@
     "slug": "mautic",
     "category": "Email Marketing / Automation",
     "alternativeTo": [
-      "mailchimp"
+      "mailchimp",
+      "constant-contact",
+      "campaign-monitor"
     ],
     "provider": "Mautic community",
     "hqCountry": "Global community",
@@ -1356,7 +1419,9 @@
     "slug": "brevo",
     "category": "Email Marketing",
     "alternativeTo": [
-      "mailchimp"
+      "mailchimp",
+      "constant-contact",
+      "campaign-monitor"
     ],
     "provider": "Brevo",
     "hqCountry": "France",
@@ -1380,7 +1445,8 @@
     "slug": "inkscape",
     "category": "Design",
     "alternativeTo": [
-      "canva"
+      "canva",
+      "adobe-illustrator"
     ],
     "provider": "Inkscape Project / community",
     "hqCountry": "Open source",
@@ -1404,7 +1470,8 @@
     "slug": "scribus",
     "category": "Design / Publishing",
     "alternativeTo": [
-      "canva"
+      "canva",
+      "adobe-indesign"
     ],
     "provider": "Scribus Project / community",
     "hqCountry": "Open source",
@@ -1428,7 +1495,8 @@
     "slug": "easy-appointments",
     "category": "Scheduling",
     "alternativeTo": [
-      "calendly"
+      "calendly",
+      "doodle"
     ],
     "provider": "Easy!Appointments / community",
     "hqCountry": "Open source",
@@ -1452,7 +1520,10 @@
     "slug": "ovhcloud",
     "category": "Cloud Infrastructure",
     "alternativeTo": [
-      "amazon-web-services"
+      "amazon-web-services",
+      "google-cloud-platform",
+      "microsoft-azure",
+      "godaddy"
     ],
     "provider": "OVH Groupe SA",
     "hqCountry": "France",
@@ -1476,7 +1547,10 @@
     "slug": "scaleway",
     "category": "Cloud Infrastructure",
     "alternativeTo": [
-      "amazon-web-services"
+      "amazon-web-services",
+      "google-cloud-platform",
+      "microsoft-azure",
+      "godaddy"
     ],
     "provider": "Scaleway SAS (Iliad Group)",
     "hqCountry": "France",
