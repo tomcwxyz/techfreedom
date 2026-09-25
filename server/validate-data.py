@@ -13,8 +13,13 @@ ROOT = Path(__file__).resolve().parents[1]
 DATA = ROOT / "assess" / "data"
 TOOLS_PATH = DATA / "tools.json"
 ALTS_PATH = DATA / "alternatives.json"
-ALT_PAGE = ROOT / "alternatives" / "index.html"
+ALT_PAGE = ROOT / "alternatives" / "index.html"\nASSESS_PAGE = ROOT / "assess" / "index.html"
 
+REQUIRED_TOOL_FIELDS = {
+    "id", "name", "slug", "category", "provider", "hqCountry", "dataHosting",
+    "jurisdiction", "continuity", "surveillance", "lockIn", "costExposure",
+    "total", "riskLevel", "keyRisks",
+}
 REQUIRED_ALT_FIELDS = {
     "id", "name", "slug", "category", "alternativeTo", "provider", "hqCountry",
     "openSource", "selfHostable", "dataHosting", "jurisdiction", "continuity",
@@ -22,7 +27,7 @@ REQUIRED_ALT_FIELDS = {
     "migrationDifficulty", "tradeoffs", "lastReviewed",
 }
 SCORE_FIELDS = ("jurisdiction", "continuity", "surveillance", "lockIn", "costExposure")
-MIN_ALTERNATIVES = 60
+MIN_TOOLS = 50\nMIN_ALTERNATIVES = 60
 
 
 def load_json(path: Path):
@@ -41,6 +46,30 @@ def main() -> int:
     tool_slugs = {tool["slug"] for tool in tools}
     if len(tool_slugs) != len(tools):
         fail(errors, "tools.json contains duplicate slugs")
+
+    tool_ids = [tool.get("id") for tool in tools]
+    if len(set(tool_ids)) != len(tool_ids):
+        fail(errors, "tools.json contains duplicate ids")
+
+    if len(tools) < MIN_TOOLS:
+        fail(errors, f"expected at least {MIN_TOOLS} tools, found {len(tools)}")
+
+    for tool in tools:
+        label = tool.get("slug") or tool.get("name") or "<unknown>"
+        missing = sorted(REQUIRED_TOOL_FIELDS - set(tool))
+        if missing:
+            fail(errors, f"{label}: missing tool fields: {', '.join(missing)}")
+
+        for field in SCORE_FIELDS:
+            score = tool.get(field)
+            if not isinstance(score, int) or not 1 <= score <= 5:
+                fail(errors, f"{label}: {field} must be an integer from 1 to 5")
+
+        scores = [tool.get(field) for field in SCORE_FIELDS]
+        if all(isinstance(score, int) for score in scores):
+            expected_total = sum(scores)
+            if tool.get("total") != expected_total:
+                fail(errors, f"{label}: total={tool.get('total')} but lens sum={expected_total}")
 
     alt_slugs = [alt.get("slug") for alt in alternatives]
     if len(set(alt_slugs)) != len(alt_slugs):
@@ -87,22 +116,29 @@ def main() -> int:
     if uncovered:
         fail(errors, "tools with no alternatives: " + ", ".join(uncovered))
 
-    # The page keeps a fallback copy for resilience. It must match the JSON source.
-    page = ALT_PAGE.read_text(encoding="utf-8")
-    match = re.search(
-        r"var ALTERNATIVES_FALLBACK = (\[.*?\]);\s*\n\s*var TOOLS = TOOLS_FALLBACK;",
-        page,
-        flags=re.S,
-    )
-    if not match:
-        fail(errors, "could not locate ALTERNATIVES_FALLBACK in alternatives/index.html")
-    else:
+    # Static pages keep fallback copies for resilience. They must match the JSON sources.
+    alt_page = ALT_PAGE.read_text(encoding="utf-8")
+    assess_page = ASSESS_PAGE.read_text(encoding="utf-8")
+
+    def validate_fallback(page_text: str, variable: str, expected, page_name: str) -> None:
+        match = re.search(
+            rf"var {variable} = (\\[.*?\\]);\\s*\\n",
+            page_text,
+            flags=re.S,
+        )
+        if not match:
+            fail(errors, f"could not locate {variable} in {page_name}")
+            return
         try:
             fallback = json.loads(match.group(1))
-            if fallback != alternatives:
-                fail(errors, "alternatives/index.html fallback is out of sync with alternatives.json")
+            if fallback != expected:
+                fail(errors, f"{page_name} {variable} is out of sync with its JSON source")
         except json.JSONDecodeError as exc:
-            fail(errors, f"alternatives/index.html fallback is not valid JSON: {exc}")
+            fail(errors, f"{page_name} {variable} is not valid JSON: {exc}")
+
+    validate_fallback(alt_page, "TOOLS_FALLBACK", tools, "alternatives/index.html")
+    validate_fallback(alt_page, "ALTERNATIVES_FALLBACK", alternatives, "alternatives/index.html")
+    validate_fallback(assess_page, "TOOLS_FALLBACK", tools, "assess/index.html")
 
     if errors:
         print("Catalogue validation FAILED")
