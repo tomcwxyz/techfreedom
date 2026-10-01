@@ -181,13 +181,13 @@ ARCHETYPES = [
         "name": "Startup",
         "slug": "startup",
         "description": "Fast-moving startup or social enterprise tech stack",
-        "tool_slugs": ["slack", "aws", "hubspot", "asana", "calendly", "zoom"],
+        "tool_slugs": ["slack", "amazon-web-services", "hubspot", "asana", "calendly", "zoom"],
     },
     {
         "name": "AI Explorer",
         "slug": "ai-explorer",
         "description": "Organisation heavily integrating AI and cloud services",
-        "tool_slugs": ["google-workspace", "slack", "aws", "zoom", "monday-com"],
+        "tool_slugs": ["google-workspace", "slack", "amazon-web-services", "zoom", "monday-com"],
     },
     {
         "name": "Legacy Stalwarts",
